@@ -19,11 +19,6 @@ class App extends React.Component {
       .catch(e => console.error(e));
   }
 
-  handleClick = () => {
-    console.log(this);
-    alert('I clicked!');
-  }
-
   onSearch = (e) => {
     this.setState({ 'search': e.target.value });
   }
@@ -37,9 +32,7 @@ class App extends React.Component {
         <SearchBox placeholder='Search for Monsters'
           handleChange={this.onSearch} />
         <CardList monsters={filteredMonsters} />
-        <button onClick={this.handleClick}>Click Me!</button>
       </div>
-
     );
   }
 }
